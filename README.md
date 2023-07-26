@@ -28,7 +28,7 @@ Features in **Redisbank Places**:
 
 Gitpod can spin up a fully featured developer friendly environment with both Visual Studio and Redisbank Places running for you.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/https://github.com/alexvasseur/redisbankplaces)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/alexvasseur/redisbankplaces)
 
 1. Once the environment is available, use the Gitpod Visual Studio `TERMINAL` window to use local build or docker compose as instructed below.
 2. Wait a minute or so and Gitpod will detect the ports from the application (8080) and RedisInsight (8001) for you to access over the Gitpod web routing. You can check in the Gitpod Visual Studio `PORTS` window.

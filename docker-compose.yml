@@ -8,7 +8,6 @@ services:
       - "8001:8001"
     networks:
       - redis-bankplaces-network
-    restart: always
 
   app-redisbankplaces:
     build:
@@ -21,7 +20,6 @@ services:
       - "8080:8080"
     networks:
       - redis-bankplaces-network
-    restart: always
     depends_on:
       - app-redis
 
