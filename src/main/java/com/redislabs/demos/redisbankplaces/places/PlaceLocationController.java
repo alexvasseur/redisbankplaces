@@ -33,7 +33,6 @@ public class PlaceLocationController {
 
     private final static String API = "https://nominatim.openstreetmap.org/search?format=json&q=";
 
-
     @GetMapping("/location/{id}")
     public LonLat locatePlace(@PathVariable("id") String id) {
         long ts = System.currentTimeMillis();
