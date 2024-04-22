@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -25,20 +26,16 @@ public class SecurityConfiguration {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http
+        http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((requests) -> requests
                         .requestMatchers("/auth-login.html", "assets/**", "/api/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin((form)->form
-                        .loginPage("/index.html")
-                        //.loginProcessingUrl("/perform_login")
-                        //.successForwardUrl("/index.html")
-                        //.defaultSuccessUrl("/index2.html", true)
-                        //.successForwardUrl("/api/login_success_handler")
-                        //.failureForwardUrl("/api/login_failure_handler")
-                        //.defaultSuccessUrl("/index.html", true)
-                        //.failureUrl("/auth-login.html?error=true")
+                        .loginPage("/auth-login.html")
+                        .loginProcessingUrl("/perform_login")
+                        .defaultSuccessUrl("/index.html")
+                        .failureUrl("/auth-login.html?error=true")
                         .permitAll()
                 )
                 .logout((logout) -> logout.permitAll());
@@ -51,7 +48,7 @@ public class SecurityConfiguration {
         UserDetails user =
                 User.withDefaultPasswordEncoder()
                         .username("alex")
-                        .password("alexv")//"{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW")
+                        .password("alexv")
                         .roles("USER")
                         .build();
         return new InMemoryUserDetailsManager(user);
