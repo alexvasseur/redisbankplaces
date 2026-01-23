@@ -22,7 +22,6 @@ services:
       - app-redis
 
   redisinsight:
-    container_name: redisinsight
     image: redis/redisinsight:latest
     environment:
       RI_DATABASE_MANAGEMENT: "false"
