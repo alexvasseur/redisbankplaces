@@ -24,17 +24,17 @@ Features in **Redisbank Places**:
 
 # Getting Started
 
-## Building and Running in Gitpod
+## Building and Running in GitHub codespaces
 
-Gitpod can spin up a fully featured developer friendly environment with both Visual Studio and Redisbank Places running for you.
+GitHub codespaces can spin up a fully featured developer friendly environment with both Visual Studio and Redisbank Places running for you.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/alexvasseur/redisbankplaces)
+[![Open in GitHub codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new/alexvasseur/redisbankplaces)
 
-1. Once the environment is available, use the Gitpod Visual Studio `TERMINAL` window to use local build or docker compose as instructed below.
-2. Wait a minute or so and Gitpod will detect the ports from the application (8080) and RedisInsight (8001) for you to access over the Gitpod web routing. You can check in the Gitpod Visual Studio `PORTS` window.
+1. Once the environment is available, use the GitHub codespaces Visual Studio `TERMINAL` window to use local build or docker compose as instructed below.
+2. Wait a minute or so and GitHub codespaces will detect the ports from the application (8080) and RedisInsight (8001) for you to access over the GitHub codespaces web routing. You can check in the GitHub codespaces Visual Studio `PORTS` window.
 3. Make sure to select the `Open Browser` to open those.
 
-## Prerequisites if not using Gitpod
+## Prerequisites if not using GitHub codespaces
 
 1. JDK 17 or higher (https://openjdk.java.net/install/index.html)
 2. Docker Desktop (https://www.docker.com/products/docker-desktop), or Colima with a docker/k8s/containerd runtime
@@ -62,6 +62,3 @@ docker run --name redis-stack --rm -p 6379:6379 -p 8001:8001 redis/redis-stack:l
 ```
 3. Access *Redisbank Places* and *Redis Insight* as instructed above
 
-# Interesting code to explore
-
-TODO
