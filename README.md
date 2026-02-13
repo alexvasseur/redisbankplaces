@@ -36,7 +36,7 @@ GitHub codespaces can spin up a fully featured developer friendly environment wi
 
 ## Prerequisites if not using GitHub codespaces
 
-1. JDK 17 or higher (https://openjdk.java.net/install/index.html)
+1. JDK 21 or higher (https://openjdk.java.net/install/index.html)
 2. Docker Desktop (https://www.docker.com/products/docker-desktop), or Colima with a docker/k8s/containerd runtime
 
 ## Running locally
@@ -61,4 +61,3 @@ docker run --name redis-stack --rm -p 6379:6379 -p 8001:8001 redis/redis-stack:l
 ./mvnw spring-boot:run
 ```
 3. Access *Redisbank Places* and *Redis Insight* as instructed above
-
